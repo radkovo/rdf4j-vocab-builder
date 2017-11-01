@@ -1,0 +1,10 @@
+CREDITS
+=======
+
+RDF4J Vocab Builder is based on the Sesame Vocab Builder originally createdy by Thomas Kurz.
+https://github.com/tkurz/sesame-vocab-builder
+
+Currently, RDF4J Vocab Builder is maintained by 
+Radek Burget <burgetr@fit.vutbr.cz>
+
+See the individual source files for the authorship information.
