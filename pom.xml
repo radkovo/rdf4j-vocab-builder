@@ -246,7 +246,7 @@
 
     <modules>
         <module>vocab-builder-core</module>
-        <module>vocab-builder-cli</module>
-        <module>vocab-builder-maven-plugin</module>
+        <!-- <module>vocab-builder-cli</module>
+        <module>vocab-builder-maven-plugin</module> -->
     </modules>
 </project>
