@@ -49,8 +49,8 @@ public class VocabBuilder {
 
     private static final Logger log = LoggerFactory.getLogger(VocabBuilder.class);
 
-    private static final IRI[] COMMENT_PROPERTIES = new IRI[]{RDFS.COMMENT, DCTERMS.DESCRIPTION, SKOS.DEFINITION, DC.DESCRIPTION};
-    private static final IRI[] LABEL_PROPERTIES = new IRI[]{RDFS.LABEL, DCTERMS.TITLE, DC.TITLE, SKOS.PREF_LABEL, SKOS.ALT_LABEL};
+    protected static final IRI[] COMMENT_PROPERTIES = new IRI[]{RDFS.COMMENT, DCTERMS.DESCRIPTION, SKOS.DEFINITION, DC.DESCRIPTION};
+    protected static final IRI[] LABEL_PROPERTIES = new IRI[]{RDFS.LABEL, DCTERMS.TITLE, DC.TITLE, SKOS.PREF_LABEL, SKOS.ALT_LABEL};
     private String name = null;
     private String prefix = null;
     private String packageName = null;
@@ -199,7 +199,7 @@ public class VocabBuilder {
         Collections.sort(keys, String.CASE_INSENSITIVE_ORDER);
 
         //string constant values
-        if (stringCaseFormat != null || StringUtils.isNotBlank(stringPropertyPrefix) || (StringUtils.isNotBlank(stringPropertySuffix))) {
+        if (getStringCaseFormat() != null || StringUtils.isNotBlank(stringPropertyPrefix) || (StringUtils.isNotBlank(stringPropertySuffix))) {
             // add the possibility to add a string property with the namespace for usage in
             for (String key : keys) {
                 final Literal comment = getFirstExistingObjectLiteral(model, splitUris.get(key), getPreferredLanguage(), COMMENT_PROPERTIES);
@@ -276,7 +276,7 @@ public class VocabBuilder {
         out.flush();
     }
 
-    private void checkField(String className, String fieldName) throws GenerationException {
+    protected void checkField(String className, String fieldName) throws GenerationException {
         if (!createdFields.add(fieldName)) {
             throw new GenerationException(String.format("field %s.%s is defined twice", className, fieldName));
         }
@@ -390,11 +390,11 @@ public class VocabBuilder {
         return bundles;
     }
 
-    private String getIndent(int level) {
+    protected String getIndent(int level) {
         return StringUtils.repeat(getIndent(), level);
     }
 
-    private Literal getFirstExistingObjectLiteral(Model model, Resource subject, String lang, IRI... predicates) {
+    protected Literal getFirstExistingObjectLiteral(Model model, Resource subject, String lang, IRI... predicates) {
         for (IRI predicate : predicates) {
             Literal literal = getOptionalObjectLiteral(model, subject, predicate, lang);
             if (literal != null) {
@@ -421,7 +421,7 @@ public class VocabBuilder {
         return result;
     }
 
-    private String cleanKey(String s) {
+    protected String cleanKey(String s) {
         s = s.replaceAll("#", "");
         s = s.replaceAll("\\.", "_");
         s = s.replaceAll("-", "_");
@@ -433,7 +433,7 @@ public class VocabBuilder {
         return s;
     }
 
-    private String doCaseFormatting(String key, CaseFormat targetFormat) {
+    protected String doCaseFormatting(String key, CaseFormat targetFormat) {
         if (targetFormat == null) {
             return key;
         } else {
@@ -500,11 +500,11 @@ public class VocabBuilder {
     }
 
     public CaseFormat getStringConstantCase() {
-        return stringCaseFormat;
+        return getStringCaseFormat();
     }
 
     public void setStringConstantCase(CaseFormat stringCaseFormat) {
-        this.stringCaseFormat = stringCaseFormat;
+        this.setStringCaseFormat(stringCaseFormat);
     }
 
     public String getStringPropertyPrefix() {
@@ -522,4 +522,16 @@ public class VocabBuilder {
 	public void setStringPropertySuffix(String stringPropertySuffix) {
 		this.stringPropertySuffix = stringPropertySuffix;
 	}
+
+    protected Model getModel() {
+        return model;
+    }
+
+    public CaseFormat getStringCaseFormat() {
+        return stringCaseFormat;
+    }
+
+    public void setStringCaseFormat(CaseFormat stringCaseFormat) {
+        this.stringCaseFormat = stringCaseFormat;
+    }
 }

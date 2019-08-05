@@ -102,6 +102,11 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.radkovo.rdf4j</groupId>
+            <artifactId>vocab-builder-python</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
