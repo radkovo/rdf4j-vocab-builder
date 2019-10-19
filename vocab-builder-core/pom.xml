@@ -6,7 +6,6 @@
         <groupId>com.github.radkovo.rdf4j</groupId>
         <artifactId>vocab-builder</artifactId>
         <version>1.1-SNAPSHOT</version>
-        <relativePath>../</relativePath>
     </parent>
 
     <artifactId>vocab-builder-core</artifactId>
