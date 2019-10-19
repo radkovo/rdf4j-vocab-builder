@@ -10,8 +10,7 @@
     dcterms:description "All vocabulary URIs defined in the Linked Data Platform (LDP) namespace.";
 	dcterms:title "The W3C Linked Data Platform (LDP) Vocabulary";
 	rdfs:label "W3C Linked Data Platform (LDP)";
-	rdfs:comment "This ontology provides an informal representation of the concepts and terms
-	as defined in the LDP specification.  Consult the LDP specification for normative reference.";
+	rdfs:comment "This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.";
 	rdfs:seeAlso <http://www.w3.org/2012/ldp>,
 		<http://www.w3.org/TR/ldp-ucr/>,
 		<http://www.w3.org/TR/ldp/>,
@@ -27,10 +26,7 @@
 :Container
     a rdfs:Class;
 	rdfs:subClassOf :Resource;
-	rdfs:comment "A Linked Data Platform Resource (LDPR) that also conforms to
-	additional patterns and conventions for managing membership.
-	Readers should refer to the specification defining this ontology for the list of
-	behaviors associated with it.";
+	rdfs:comment "A Linked Data Platform Resource (LDPR) that also conforms to additional patterns and conventions for managing membership. Readers should refer to the specification defining this ontology for the list of behaviors associated with it.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "Container".
@@ -38,13 +34,7 @@
 :AggregateContainer
     a rdfs:Class;
 	rdfs:subClassOf :Container;
-	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to
-	additional patterns and conventions for managing members.  It is distinguished from
-	CompositeContainer by the following behaviors:
-	(1) Clients cannot assume that an AggregateContainer, when deleted, deletes its members.
-
-	While every attempt is made to be complete in this list, readers should also refer
-	to the specification defining this ontology.";
+	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to additional patterns and conventions for managing members.  It is distinguished from CompositeContainer by the following behaviors: (1) Clients cannot assume that an AggregateContainer, when deleted, deletes its members. While every attempt is made to be complete in this list, readers should also refer to the specification defining this ontology.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "AggregateContainer".
@@ -52,13 +42,7 @@
 :CompositeContainer
     a rdfs:Class;
 	rdfs:subClassOf :Container;
-	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to
-	additional patterns and conventions for managing members.  It is distinguished from
-	AggregateContainer by the following behaviors:
-	(1) An CompositeContainer, when deleted, must delete all its members.
-
-	While every attempt is made to be complete in this list, readers should also
-	refer to the specification defining this ontology.";
+	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to additional patterns and conventions for managing members.  It is distinguished from AggregateContainer by the following behaviors: (1) An CompositeContainer, when deleted, must delete all its members. While every attempt is made to be complete in this list, readers should also refer to the specification defining this ontology.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "CompositeContainer".
