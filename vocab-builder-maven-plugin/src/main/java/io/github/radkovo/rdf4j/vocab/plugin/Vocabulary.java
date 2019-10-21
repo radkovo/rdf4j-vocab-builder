@@ -1,4 +1,4 @@
-package com.github.radkovo.rdf4j.vocab.plugin;
+package io.github.radkovo.rdf4j.vocab.plugin;
 
 import java.io.File;
 import java.net.URL;

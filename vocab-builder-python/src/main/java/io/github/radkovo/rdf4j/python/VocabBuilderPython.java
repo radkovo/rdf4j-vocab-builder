@@ -3,7 +3,7 @@
  *
  * Created on 5. 8. 2019, 11:07:32 by burgetr
  */
-package com.github.radkovo.rdf4j.python;
+package io.github.radkovo.rdf4j.python;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -32,8 +32,8 @@ import org.eclipse.rdf4j.rio.RDFParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.github.radkovo.rdf4j.vocab.GenerationException;
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
+import io.github.radkovo.rdf4j.vocab.GenerationException;
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
 
 /**
  * A vocab builder that generates python code.

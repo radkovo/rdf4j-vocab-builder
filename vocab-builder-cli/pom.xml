@@ -40,7 +40,7 @@
                     <archive>
                         <index>true</index>
                         <manifest>
-                            <mainClass>com.github.tkurz.sesame.vocab.Main</mainClass>
+                            <mainClass>io.github.radkovo.rdf4j.vocab.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>

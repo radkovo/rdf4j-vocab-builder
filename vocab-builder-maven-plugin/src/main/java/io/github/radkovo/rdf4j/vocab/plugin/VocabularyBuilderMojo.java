@@ -1,8 +1,9 @@
-package com.github.radkovo.rdf4j.vocab.plugin;
+package io.github.radkovo.rdf4j.vocab.plugin;
 
-import com.github.radkovo.rdf4j.vocab.GenerationException;
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
 import com.google.common.base.CaseFormat;
+
+import io.github.radkovo.rdf4j.vocab.GenerationException;
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;

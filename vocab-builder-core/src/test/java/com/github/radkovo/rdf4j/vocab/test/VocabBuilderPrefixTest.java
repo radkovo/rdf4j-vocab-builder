@@ -6,8 +6,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import com.github.radkovo.rdf4j.vocab.GenerationException;
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
+import io.github.radkovo.rdf4j.vocab.GenerationException;
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
 
 import java.io.File;
 import java.io.IOException;

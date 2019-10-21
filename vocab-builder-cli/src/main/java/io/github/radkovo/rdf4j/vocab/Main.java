@@ -1,4 +1,4 @@
-package com.github.radkovo.rdf4j.vocab;
+package io.github.radkovo.rdf4j.vocab;
 
 import org.apache.commons.cli.*;
 import org.apache.commons.io.FileUtils;
@@ -16,9 +16,10 @@ import org.eclipse.rdf4j.rio.RDFParserRegistry;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.UnsupportedRDFormatException;
 
-import com.github.radkovo.rdf4j.vocab.GenerationException;
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
 import com.google.common.base.CaseFormat;
+
+import io.github.radkovo.rdf4j.vocab.GenerationException;
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
 
 import java.io.File;
 import java.io.FileNotFoundException;

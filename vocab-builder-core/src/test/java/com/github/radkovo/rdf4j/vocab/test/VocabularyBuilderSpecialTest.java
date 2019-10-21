@@ -1,7 +1,9 @@
 package com.github.radkovo.rdf4j.vocab.test;
 
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
 import com.google.common.io.Resources;
+
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;

@@ -1,4 +1,4 @@
-package com.github.radkovo.rdf4j.vocab;
+package io.github.radkovo.rdf4j.vocab;
 
 import com.google.common.collect.Sets;
 

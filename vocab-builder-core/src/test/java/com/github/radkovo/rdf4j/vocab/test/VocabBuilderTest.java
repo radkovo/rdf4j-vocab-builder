@@ -3,8 +3,9 @@
  */
 package com.github.radkovo.rdf4j.vocab.test;
 
-import com.github.radkovo.rdf4j.vocab.VocabBuilder;
 import com.google.common.base.CaseFormat;
+
+import io.github.radkovo.rdf4j.vocab.VocabBuilder;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
@@ -143,7 +144,7 @@ public class VocabBuilderTest {
     }
 
     /**
-     * Test method for {@link com.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
+     * Test method for {@link io.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
      */
     @Test
     public final void testRun() throws Exception {
@@ -170,7 +171,7 @@ public class VocabBuilderTest {
     }
 
     /**
-     * Test method for {@link com.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
+     * Test method for {@link io.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
      */
     @Test
     public final void testUpperUnderscoreCase() throws Exception {
@@ -193,7 +194,7 @@ public class VocabBuilderTest {
     }
 
     /**
-     * Test method for {@link com.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
+     * Test method for {@link io.github.radkovo.rdf4j.vocab.VocabBuilder#generate(java.nio.file.Path)}.
      */
     @Test
     public final void testNoExplicitCase() throws Exception {
