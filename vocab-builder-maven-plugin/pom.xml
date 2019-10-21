@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.radkovo.rdf4j</groupId>
+        <groupId>io.github.radkovo</groupId>
         <artifactId>vocab-builder</artifactId>
         <version>1.2-SNAPSHOT</version>
     </parent>
@@ -46,7 +46,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.radkovo.rdf4j</groupId>
+            <groupId>io.github.radkovo</groupId>
             <artifactId>vocab-builder-core</artifactId>
             <version>${project.version}</version>
         </dependency>
