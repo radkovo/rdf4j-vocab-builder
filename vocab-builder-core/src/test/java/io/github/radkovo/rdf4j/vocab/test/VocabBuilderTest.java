@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.github.radkovo.rdf4j.vocab.test;
+package io.github.radkovo.rdf4j.vocab.test;
 
 import com.google.common.base.CaseFormat;
 

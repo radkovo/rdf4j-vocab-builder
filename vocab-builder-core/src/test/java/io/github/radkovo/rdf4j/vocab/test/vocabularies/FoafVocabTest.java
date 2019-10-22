@@ -1,9 +1,9 @@
-package com.github.radkovo.rdf4j.vocab.test.vocabularies;
+package io.github.radkovo.rdf4j.vocab.test.vocabularies;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.Assume;
 
-import com.github.radkovo.rdf4j.vocab.test.AbstractVocabSpecificTest;
+import io.github.radkovo.rdf4j.vocab.test.AbstractVocabSpecificTest;
 
 import java.io.IOException;
 import java.io.InputStream;

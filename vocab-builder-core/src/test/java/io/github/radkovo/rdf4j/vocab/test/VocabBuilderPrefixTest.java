@@ -1,4 +1,4 @@
-package com.github.radkovo.rdf4j.vocab.test;
+package io.github.radkovo.rdf4j.vocab.test;
 
 import org.eclipse.rdf4j.rio.RDFParseException;
 import org.junit.Assert;
