@@ -18,8 +18,8 @@ import org.eclipse.rdf4j.rio.UnsupportedRDFormatException;
 
 import com.google.common.base.CaseFormat;
 
-import io.github.radkovo.rdf4j.vocab.GenerationException;
-import io.github.radkovo.rdf4j.vocab.VocabBuilder;
+import io.github.radkovo.rdf4j.js.VocabBuilderJavascript;
+import io.github.radkovo.rdf4j.python.VocabBuilderPython;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -74,6 +74,7 @@ public class Main {
             }
 
             RDFFormat format = Rio.getParserFormatForMIMEType(cli.getOptionValue('f', null)).orElse(null);
+            String targetLanguage = cli.getOptionValue('T', "java");
 
             final VocabBuilder builder;
             if (input.startsWith("http://")) {
@@ -91,9 +92,9 @@ public class Main {
                     throw new ParseException("Invalid input URL: " + e.getMessage());
                 }
 
-                builder = new VocabBuilder(tempFile.toString(), format);
+                builder = createBuilder(tempFile.toString(), format, targetLanguage);
             } else
-                builder = new VocabBuilder(input, format);
+                builder = createBuilder(input, format, targetLanguage);
 
             if (cli.hasOption('p')) {
                 builder.setPackageName(cli.getOptionValue('p'));
@@ -189,6 +190,18 @@ public class Main {
                     System.err.println("Error while deleting temp-file " + tempFile + ": "+ e.getMessage());
                 }
             }
+        }
+    }
+
+    private static VocabBuilder createBuilder(final String input, RDFFormat format, String targetLanguage) throws IOException
+    {
+        switch (targetLanguage) {
+            case "python":
+                return new VocabBuilderPython(input, format);
+            case "javascript":
+                return new VocabBuilderJavascript(input, format);
+            default:
+                return new VocabBuilder(input, format);
         }
     }
 
@@ -299,6 +312,14 @@ public class Main {
                 .hasArgs(1)
                 .withArgName("prefix")
                 .create('P'));
+
+        o.addOption(OptionBuilder
+                .withLongOpt("target")
+                .withDescription("target language (java*, javascript or python)")
+                .hasArgs(1)
+                .withArgName("language")
+                .isRequired(false)
+                .create('T'));
 
         o.addOption(OptionBuilder
                 .withLongOpt("help")

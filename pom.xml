@@ -323,5 +323,6 @@
         <module>vocab-builder-cli</module>
         <module>vocab-builder-maven-plugin</module>
     	<module>vocab-builder-python</module>
+    	<module>vocab-builder-javascript</module>
   </modules>
 </project>

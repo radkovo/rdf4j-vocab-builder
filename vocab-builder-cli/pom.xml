@@ -103,6 +103,11 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>io.github.radkovo</groupId>
+            <artifactId>vocab-builder-javascript</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
